@@ -1,4 +1,4 @@
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/jeertmans/selsearch/main.svg)](https://results.pre-commit.ci/latest/github/jeertmans/selsearch/main) [![PyPI version](https://badge.fury.io/py/selsearch.svg)](https://badge.fury.io/py/selsearch) 
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/jeertmans/selsearch/main.svg)](https://results.pre-commit.ci/latest/github/jeertmans/selsearch/main) [![PyPI version](https://badge.fury.io/py/selsearch.svg)](https://badge.fury.io/py/selsearch)
 # SelSearch - Internet search based on selected text
 
 SelSearch graps text selected in any application and opens a web browser to search for.
@@ -17,7 +17,7 @@ SelSearch best works with [XSel](http://www.kfish.org/software/xsel/), a program
 
 The demo hereunder shows how you can select text, *Linux*, in a terminal, search for it in Google. Then, search for an English to French translation of some text on DeepL.
 
-![](static/demo.gif)
+![](https://github.com/jeertmans/selsearch/blob/main/static/demo.gif)
 
 ### Usage
 
