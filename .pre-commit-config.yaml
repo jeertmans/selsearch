@@ -9,8 +9,3 @@ repos:
     rev: 21.9b0
     hooks:
     -   id: black
--   repo: https://github.com/jeertmans/byexample
-    rev: 10.3.2
-    hooks:
-    -   id: byexample
-        args: ["-l", "python"]
