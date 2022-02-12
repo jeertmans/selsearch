@@ -1,0 +1,6 @@
+
+*.pyc
+
+build/*
+
+selsearch.egg-info/
