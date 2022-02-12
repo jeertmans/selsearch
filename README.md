@@ -1,4 +1,6 @@
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/jeertmans/selsearch/main.svg)](https://results.pre-commit.ci/latest/github/jeertmans/selsearch/main) [![PyPI version](https://badge.fury.io/py/selsearch.svg)](https://badge.fury.io/py/selsearch)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/jeertmans/selsearch/main.svg)](https://results.pre-commit.ci/latest/github/jeertmans/selsearch/main)
+[![Latest Release][pypi-version-badge]][pypi-version-url]
+[![Python version][pypi-python-version-badge]][pypi-version-url]
 # SelSearch - Internet search based on selected text
 
 SelSearch graps text selected in any application and opens a web browser to search for.
@@ -41,7 +43,7 @@ selsearch -l
 
 #### Recommended Usage
 
-However, SelSearch is best used when set as a keyboard shortcut. For example, in the demo, `selsearch` is mapped to `<ctrl>+<m>` and `selsearch -w DeepL` to `<ctrl>-<n>`. How to set up keyboard shortcuts depends on your platform.
+However, SelSearch is best used when set as a keyboard shortcut. For example, in the demo, `selsearch` is mapped to `<ctrl>+<m>` and `selsearch -w DeepL` to `<ctrl>+<n>`. How to set up keyboard shortcuts depends on your platform.
 
 ### Customize
 
@@ -61,4 +63,11 @@ export SELSEARCH_DEFAULT_SEARCH_URL="https://translate.google.be/?text="
 
 ### Contributing
 
-Feel free to contribute or propose ideas using the [Issues]() and [Pull Request]() tabs.
+Feel free to contribute or propose ideas using the [Issues](https://github.com/jeertmans/selsearch/issues) and [Pull requests](https://github.com/jeertmans/selsearch/pulls) tabs.
+
+
+[pypi-version-badge]: https://img.shields.io/pypi/v/selsearch?label=SelSearch
+[pypi-version-url]: https://pypi.org/project/selsearch/
+[pypi-python-version-badge]: https://img.shields.io/pypi/pyversions/selsearch
+[github-ci-img]: https://github.com/jeertmans/pyropey/actions/workflows/CI.yml/badge.svg
+[github-ci]: https://github.com/jeertmans/pyropey/actions?query=workflow%3Aci
