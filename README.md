@@ -19,7 +19,7 @@ SelSearch best works with [XSel](http://www.kfish.org/software/xsel/), a program
 
 The demo hereunder shows how you can select text, *Linux*, in a terminal, search for it in Google. Then, search for an English to French translation of some text on DeepL.
 
-![](https://github.com/jeertmans/selsearch/blob/main/static/demo.gif)
+![](https://raw.githubusercontent.com/jeertmans/selsearch/main/static/demo.gif)
 
 ### Usage
 
