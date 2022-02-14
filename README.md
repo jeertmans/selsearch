@@ -13,7 +13,7 @@ SelSearch can be installed using `pip`:
 pip install selsearch
 ```
 
-SelSearch best works with [XSel](http://www.kfish.org/software/xsel/), a program that grabs current selection using X. If XSel is not available on your system, SelSearch will use the clipboard to grab current selection. On Linux, the latter requires a sudo access.
+SelSearch best works with [XSel](http://www.kfish.org/software/xsel/), a program that grabs current selection using X. If XSel is not available on your system, SelSearch will use the clipboard to grab current selection.
 
 ### Live Demo
 
@@ -60,6 +60,17 @@ Example in `~/.bashrc`:
 ```
 export SELSEARCH_DEFAULT_SEARCH_URL="https://translate.google.be/?text="
 ```
+
+### Future Features
+
+Here are a list of future features that I would like to add to SelSearch:
+
+- [ ] App Icon
+- [ ] Installation that defaults to launch on startup
+- [ ] Ability to customize keyboard shortcuts
+- [ ] GUI so customize app
+- [ ] Use of a config folder (instead of environ variable?)
+- [ ] ...
 
 ### Contributing
 

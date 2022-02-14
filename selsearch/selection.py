@@ -1,14 +1,11 @@
 import os
 import shutil
-import keyboard
+import time
+
 import pyperclip
+from pynput.keyboard import Controller, Key
 
-
-class XSelNotFoundError(Exception):
-    def __init__(self):
-        super().__init__(
-            "Executable XSel was not found. Please install XSel, see: http://www.kfish.org/software/xsel/#download."
-        )
+keyboard = Controller()
 
 
 def get_selected_text_xsel():
@@ -18,7 +15,11 @@ def get_selected_text_xsel():
 def get_selected_text_alt():
     clipboard = pyperclip.paste()
 
-    keyboard.send("ctrl+c")
+    keyboard.press(Key.ctrl)
+    keyboard.press("c")
+    time.sleep(0.1)
+    keyboard.release("c")
+    keyboard.release(Key.ctrl)
     text = pyperclip.paste()
 
     pyperclip.copy(clipboard)
