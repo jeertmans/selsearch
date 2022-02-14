@@ -1,24 +1,24 @@
 from functools import partial
 
 import click
-from pynput.keyboard import GlobalHotKeys, HotKey, Controller, Listener, Key, KeyCode, _NORMAL_MODIFIERS
-
+from pynput.keyboard import (_NORMAL_MODIFIERS, Controller, GlobalHotKeys,
+                             HotKey, Key, KeyCode, Listener)
 
 from .main import search_selected_text
 
 listeners = []
 
 
-
 def callback(f, *args, **kwargs):
     def wrapper():
-        
+
         while listeners:
             listeners.pop().stop()
 
         callables.append(partial(f, *args, **kwargs))
 
     return wrapper
+
 
 shortcuts = {
     "<ctrl>+<alt>+e": callback(exit),
@@ -38,7 +38,7 @@ def gui():
     Continuously runs in background.
     """
     while True:
-        
+
         with GlobalHotKeys(shortcuts) as listener:
             listeners.append(listener)
             listener.join()
