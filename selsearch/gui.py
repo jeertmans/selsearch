@@ -1,7 +1,7 @@
 from functools import partial
 
 import click
-from pynput.keyboard import GlobalHotKeys, HotKey, Controller, Listener, Key, KeyCode, _NORMAL_MODIFIERS
+from pynput.keyboard import GlobalHotKeys
 
 
 from .main import search_selected_text
