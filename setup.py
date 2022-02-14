@@ -1,6 +1,6 @@
-from setuptools import setup, find_packages
-from selsearch import __version__ as version
+from setuptools import find_packages, setup
 
+from selsearch import __version__ as version
 
 with open("README.md", "r") as f:
     long_description = f.read()
@@ -26,10 +26,10 @@ setup(
     install_requires=[
         "click==8.0.3",
         "pyperclip==1.8.2",
-        "keyboard==0.13.5",
+        "pynput==1.7.6",
     ],
     entry_points="""
         [console_scripts]
-        selsearch=selsearch.main:main
+        selsearch=app:cli
     """,
 )
