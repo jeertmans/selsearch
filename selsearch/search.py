@@ -1,5 +1,5 @@
-import webbrowser
 import urllib.parse
+import webbrowser
 
 
 def search_text(where, text):

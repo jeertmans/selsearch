@@ -1,13 +1,14 @@
+from functools import partial
+
 import click
 from pynput.keyboard import GlobalHotKeys
-from functools import partial
+
 from .main import search_selected_text
 
 hotkeys = {
     "<ctrl>+m": search_selected_text,
     "<ctrl>+n": partial(search_selected_text, where="DeepL"),
     "<ctrl>+b": partial(search_selected_text, where="WordReference"),
-
 }
 
 
