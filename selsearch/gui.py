@@ -1,15 +1,33 @@
 from functools import partial
 
 import click
-from pynput.keyboard import GlobalHotKeys
+from pynput.keyboard import GlobalHotKeys, HotKey, Controller, Listener, Key, KeyCode, _NORMAL_MODIFIERS
+
 
 from .main import search_selected_text
 
-hotkeys = {
-    "<ctrl>+m": search_selected_text,
-    "<ctrl>+n": partial(search_selected_text, where="DeepL"),
-    "<ctrl>+b": partial(search_selected_text, where="WordReference"),
+listeners = []
+
+
+
+def callback(f, *args, **kwargs):
+    def wrapper():
+        
+        while listeners:
+            listeners.pop().stop()
+
+        callables.append(partial(f, *args, **kwargs))
+
+    return wrapper
+
+shortcuts = {
+    "<ctrl>+<alt>+e": callback(exit),
+    "<ctrl>+<alt>+m": callback(search_selected_text),
+    "<ctrl>+<alt>+n": callback(search_selected_text, where="DeepL"),
+    "<ctrl>+<alt>+b": callback(search_selected_text, where="WordReference"),
 }
+
+callables = []
 
 
 @click.command()
@@ -19,5 +37,12 @@ def gui():
 
     Continuously runs in background.
     """
-    with GlobalHotKeys(hotkeys) as listener:
-        listener.join()
+    while True:
+        
+        with GlobalHotKeys(shortcuts) as listener:
+            listeners.append(listener)
+            listener.join()
+
+        while callables:
+            f = callables.pop()
+            f()
