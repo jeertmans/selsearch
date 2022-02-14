@@ -1,8 +1,8 @@
 import click
 
-from selsearch.gui import gui
-from selsearch.main import search_selected_text
-from selsearch.where import get_list_of_search_urls
+from .gui import gui
+from .main import search_selected_text
+from .where import get_list_of_search_urls
 
 
 @click.group(invoke_without_command=True)
