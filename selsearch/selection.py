@@ -1,7 +1,6 @@
 import os
 import shutil
 import time
-
 import pyperclip
 from pynput.keyboard import Controller, Key
 
@@ -15,7 +14,6 @@ def get_selected_text_xsel():
 def get_selected_text_alt():
     clipboard = pyperclip.paste()
 
-    keyboard.release(Key.alt)
     keyboard.press(Key.ctrl)
     keyboard.press("c")
     time.sleep(0.1)
