@@ -30,6 +30,6 @@ setup(
     ],
     entry_points="""
         [console_scripts]
-        selsearch=app:cli
+        selsearch=selsearch.app:cli
     """,
 )

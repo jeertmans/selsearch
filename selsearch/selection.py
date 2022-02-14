@@ -15,6 +15,7 @@ def get_selected_text_xsel():
 def get_selected_text_alt():
     clipboard = pyperclip.paste()
 
+    keyboard.release(Key.alt)
     keyboard.press(Key.ctrl)
     keyboard.press("c")
     time.sleep(0.1)
@@ -26,7 +27,7 @@ def get_selected_text_alt():
     return text
 
 
-if shutil.which("xsel"):
+if shutil.which("xxsel"):
     get_selected_text = get_selected_text_xsel
 else:
     get_selected_text = get_selected_text_alt
