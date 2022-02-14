@@ -45,6 +45,8 @@ selsearch -l
 
 However, SelSearch is best used when set as a keyboard shortcut. For example, in the demo, `selsearch` is mapped to `<ctrl>+<m>` and `selsearch -w DeepL` to `<ctrl>+<n>`. How to set up keyboard shortcuts depends on your platform.
 
+As it may be hard to setup keyboard shortcuts on Windows, it is also possible to run the app in background with `selsearch gui`. It will continuously listen for keyboard inputs and launch appropriate commands when needed. Shortcuts customization is not available yet.
+
 ### Customize
 
 Other functionnalities can be listed with:
@@ -70,7 +72,7 @@ Here are a list of future features that I would like to add to SelSearch:
 - [ ] Ability to customize keyboard shortcuts
 - [ ] GUI so customize app
 - [ ] Use of a config folder (instead of environ variable?)
-- [ ] ...
+- [ ] Fix keyboard shortcuts on Windows (bugs...)
 
 ### Contributing
 
