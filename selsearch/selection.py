@@ -1,6 +1,7 @@
 import os
 import shutil
 import time
+import platform
 
 import pyperclip
 from pynput.keyboard import Controller, Key
@@ -17,7 +18,6 @@ def get_selected_text_alt():
 
     keyboard.release(Key.alt)
     with keyboard.pressed(Key.ctrl):
-        keyboard.press(Key.ctrl)
         keyboard.press("c")
         time.sleep(0.1)
         keyboard.release("c")
@@ -27,7 +27,22 @@ def get_selected_text_alt():
     return text
 
 
+def get_selected_text_mac():
+    clipboard = pyperclip.paste()
+
+    keyboard.release(Key.alt)
+    with keyboard.pressed(Key.cmd):
+        keyboard.press("c")
+        time.sleep(0.1)
+        keyboard.release("c")
+    text = pyperclip.paste()
+
+    pyperclip.copy(clipboard)
+    return text
+
 if shutil.which("xsel"):
     get_selected_text = get_selected_text_xsel
+elif platform.system() == "Darwin":
+    get_selected_text = get_selected_text_mac
 else:
     get_selected_text = get_selected_text_alt
