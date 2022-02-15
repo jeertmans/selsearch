@@ -59,7 +59,30 @@ SelSearch can be configured via a config file. You can generate a default one wi
 selsearch init
 ```
 
-The path will be displayed and modifications to this file will be taken into account everytime you run `selsearch` or any of its subcommands.
+The path will be displayed and modifications to this file will be taken into account everytime you run `selsearch` or any of its subcommands. The file will look something like this:
+
+```ini
+; Removing any of the following section will cause the program to break
+[defaults]
+exit = <ctrl>+<alt>+e  ; Can be removed to disallow exiting SelSearch
+url = google  ; Default url used for `selsearch`
+
+[urls]
+; List of urls and their aliases
+; You can add / remove / edit any number of lines
+google = https://www.google.com/search?q=
+wordreference = https://www.wordreference.com/enfr/
+deepl = https://www.deepl.com/translator#en/fr/
+googlescholar = https://scholar.google.com/scholar?q=
+
+[shortcuts]
+; List of shortcuts and corresponding url (or alias)
+; You can add / remove / edit any number of lines
+<ctrl>+<alt>+m = google
+<ctrl>+<alt>+n = deepl
+<ctrl>+<alt>+b = wordreference
+
+```
 
 Other functionnalities can be listed with:
 
@@ -78,7 +101,7 @@ Here are a list of future features that I would like to add to SelSearch:
 - [ ] GUI so customize app
 - [x] Use of a config folder (instead of environ variable?)
 - [x] Fix keyboard shortcuts on Windows (bugs...)
-- [ ] Document how to use config file
+- [x] Document how to use config file
 
 ### Contributing
 
