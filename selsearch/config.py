@@ -3,7 +3,6 @@ import os
 import configparser
 
 import click
-from appdirs import user_data_dir
 
 DEFAULT_CONFIG = {
     "defaults": {
