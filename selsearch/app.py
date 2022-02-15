@@ -1,39 +1,56 @@
 import click
 
+from . import __version__
 from .gui import gui
+from .config import init, get_config
 from .main import search_selected_text
-from .where import get_list_of_search_urls
 
 
 @click.group(invoke_without_command=True)
 @click.option(
-    "-w",
-    "--where",
+    "-u",
+    "--url",
     type=str,
-    default=None,
-    help="Where to search to search for the search. Can be any value listed by `selsearch -l` or any url. Defaults to Google.",
+    default="",
+    help="Where to search on the internet. Can be any value listed by `selsearch -l` or any url. Defaults to Google.",
 )
 @click.option(
     "-l",
-    "--list-where",
+    "--list-urls",
     is_flag=True,
     default=False,
     help="If set, lists all the registered places to search.",
 )
+@click.version_option(__version__)
 @click.pass_context
-def cli(ctx, where, list_where):
+def cli(ctx, url, list_urls):
     """
     Searches (in your default browser) the currently selected text (in any application).
     """
     if ctx.invoked_subcommand:
         return
-    if list_where:
-        click.echo(get_list_of_search_urls())
+    
+    config = get_config()
+    urls = config["urls"]
+
+    if list_urls:
+        max_len = max(map(len, urls.keys()))
+
+        keys = sorted(urls.keys())
+
+        text = "\n".join(f"{key:{max_len}s} - {urls[key]}" for key in keys)
+        click.echo(text)
         return
 
-    search_selected_text(where=where)
+    default_url = config["defaults"].get("url", "").lower()
+    default_url = urls.get(default_url, None) or default_url
+
+    url = urls.get(url, None) or None or default_url
+
+    search_selected_text(where=url)
 
 
+cli.add_command(init)
 cli.add_command(gui)
 
 if __name__ == "__main__":
