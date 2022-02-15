@@ -32,7 +32,7 @@ selsearch
 Optionally, you can specify the place where text is gonna be searched on:
 
 ```
-selsearch -w DeepL
+selsearch -u DeepL
 ```
 
 You can obtain a list of search urls with:
@@ -45,9 +45,17 @@ selsearch -l
 
 However, SelSearch is best used when set as a keyboard shortcut. For example, in the demo, `selsearch` is mapped to `<ctrl>+<m>` and `selsearch -w DeepL` to `<ctrl>+<n>`. How to set up keyboard shortcuts depends on your platform.
 
-As it may be hard to setup keyboard shortcuts on Windows, it is also possible to run the app in background with `selsearch gui`. It will continuously listen for keyboard inputs and launch appropriate commands when needed. Shortcuts customization is not available yet.
+As it may be hard to setup keyboard shortcuts on Windows, it is also possible to run the app in background with `selsearch gui`. It will continuously listen for keyboard inputs and launch appropriate commands when needed.
 
 ### Customize
+
+SelSearch can be configured via a config file. You can generate a default one with:
+
+```
+selsearch init
+```
+
+The path will be displayed and modifications to this file will be taken into account everytime you run `selsearch` or any of its subcommands.
 
 Other functionnalities can be listed with:
 
@@ -55,13 +63,6 @@ Other functionnalities can be listed with:
 selsearch --help
 ```
 
-If you desire to change the default search url, or set a custom one, you can set to environment variable `SELSEARCH_DEFAULT_SEARCH_URL` to any key listed by `selsearch -l` or any url.
-
-Example in `~/.bashrc`:
-
-```
-export SELSEARCH_DEFAULT_SEARCH_URL="https://translate.google.be/?text="
-```
 
 ### Future Features
 
@@ -69,10 +70,11 @@ Here are a list of future features that I would like to add to SelSearch:
 
 - [ ] App Icon
 - [ ] Installation that defaults to launch on startup
-- [ ] Ability to customize keyboard shortcuts
+- [x] Ability to customize keyboard shortcuts
 - [ ] GUI so customize app
-- [ ] Use of a config folder (instead of environ variable?)
-- [ ] Fix keyboard shortcuts on Windows (bugs...)
+- [x] Use of a config folder (instead of environ variable?)
+- [x] Fix keyboard shortcuts on Windows (bugs...)
+- [ ] Document how to use config file
 
 ### Contributing
 
