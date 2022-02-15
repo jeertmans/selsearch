@@ -7,7 +7,7 @@
   <img src="https://raw.githubusercontent.com/jeertmans/selsearch/main/static/logo.png" />
 </p>
 
-SelSearch graps text selected in any application and opens a web browser to search for.
+SelSearch grabs text selected in any application and opens a web browser to search for.
 
 By default, it will search on Google, but you can custimize your search to, for example, look for a DeepL translation of your text (as in the demo below).
 
