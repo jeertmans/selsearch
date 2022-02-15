@@ -1,6 +1,5 @@
-from appdirs import user_config_dir
-import os
 import configparser
+import os
 
 import click
 
