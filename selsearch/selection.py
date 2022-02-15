@@ -41,9 +41,9 @@ def get_selected_text_mac():
     return text
 
 
-if shutil.which("xsel"):
-    get_selected_text = get_selected_text_xsel
-elif platform.system() == "Darwin":
+if platform.system() == "Darwin":
     get_selected_text = get_selected_text_mac
+elif shutil.which("xsel"):
+    get_selected_text = get_selected_text_xsel
 else:
     get_selected_text = get_selected_text_alt
