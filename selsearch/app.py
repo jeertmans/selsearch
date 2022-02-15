@@ -1,8 +1,8 @@
 import click
 
 from . import __version__
+from .config import get_config, init
 from .gui import gui
-from .config import init, get_config
 from .main import search_selected_text
 
 
@@ -29,7 +29,7 @@ def cli(ctx, url, list_urls):
     """
     if ctx.invoked_subcommand:
         return
-    
+
     config = get_config()
     urls = config["urls"]
 

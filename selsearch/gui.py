@@ -3,8 +3,8 @@ from functools import partial
 import click
 from pynput.keyboard import GlobalHotKeys
 
-from .main import search_selected_text
 from .config import get_config
+from .main import search_selected_text
 
 listeners = []
 
