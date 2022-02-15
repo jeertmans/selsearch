@@ -1,8 +1,8 @@
-from appdirs import user_config_dir
 import configparser
 import os
 
 import click
+from appdirs import user_config_dir
 
 DEFAULT_CONFIG = {
     "defaults": {
