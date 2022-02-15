@@ -27,29 +27,17 @@ The demo hereunder shows how you can select text, *Linux*, in a terminal, search
 
 ### Usage
 
-The most basic usage of SelSearch is the following:
-
+While SeaSearch can be used in command line, it is recommended to use its background mode via:
 ```
-selsearch
+selsearch gui &
 ```
+The `&` at the end will allow SelSearch to run in background.
 
-Optionally, you can specify the place where text is gonna be searched on:
+SelSearch will continuously listen for (customizable) keyboard shortcuts and trigger various internet researches in response. For example, in the demo, Google search is mapped to `<ctrl>+<m>` and DeepL translation to `<ctrl>+<n>`.
 
-```
-selsearch -u DeepL
-```
+It is also recommended to set up `selsearch gui` to launch at startup. How to do that depends on your platform and is currently not handled by this project.
 
-You can obtain a list of search urls with:
-
-```
-selsearch -l
-```
-
-#### Recommended Usage
-
-However, SelSearch is best used when set as a keyboard shortcut. For example, in the demo, `selsearch` is mapped to `<ctrl>+<m>` and `selsearch -w DeepL` to `<ctrl>+<n>`. How to set up keyboard shortcuts depends on your platform.
-
-As it may be hard to setup keyboard shortcuts on Windows, it is also possible to run the app in background with `selsearch gui`. It will continuously listen for keyboard inputs and launch appropriate commands when needed.
+*Note: despite the naming, SelSearch does not a graphical user interface (gui) yet. This is planned as a future feature for easier configuration.*
 
 ### Customize
 
