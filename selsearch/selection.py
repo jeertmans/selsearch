@@ -1,7 +1,7 @@
 import os
+import platform
 import shutil
 import time
-import platform
 
 import pyperclip
 from pynput.keyboard import Controller, Key
@@ -39,6 +39,7 @@ def get_selected_text_mac():
 
     pyperclip.copy(clipboard)
     return text
+
 
 if shutil.which("xsel"):
     get_selected_text = get_selected_text_xsel
