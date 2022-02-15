@@ -21,7 +21,8 @@ from .main import search_selected_text
     default=False,
     help="If set, lists all the registered places to search.",
 )
-@click.version_option(__version__)
+@click.version_option(__version__, "-v", "--version")
+@click.help_option("-h", "--help")
 @click.pass_context
 def cli(ctx, url, list_urls):
     """
