@@ -24,6 +24,7 @@ setup(
     license="MIT",
     python_requires=">=3.6",
     install_requires=[
+        "appdirs==1.4.4",
         "click==8.0.3",
         "pyperclip==1.8.2",
         "pynput==1.7.6",
