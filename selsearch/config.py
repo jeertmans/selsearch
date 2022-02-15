@@ -1,5 +1,6 @@
-import configparser
+from appdirs import user_config_dir
 import os
+import configparser
 
 import click
 from appdirs import user_data_dir
@@ -28,7 +29,7 @@ default_config.read_dict(DEFAULT_CONFIG)
 
 
 def get_config_dir():
-    return user_data_dir("selsearch", "jeertmans")
+    return user_config_dir("selsearch", "jeertmans")
 
 
 def get_config_file(config_dir):
