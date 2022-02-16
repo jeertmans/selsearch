@@ -19,7 +19,7 @@ SelSearch can be installed using `pip`:
 pip install selsearch
 ```
 
-SelSearch best works with [XSel](http://www.kfish.org/software/xsel/), a program that grabs current selection using X. If XSel is not available on your system, SelSearch will use the clipboard to grab current selection.
+For more infomations about installation guidelines and known issues, see [INSTALL.md](https://github.com/jeertmans/selsearch/INSTALL.md).
 
 ### Live Demo
 
@@ -79,15 +79,6 @@ Other functionnalities can be listed with:
 ```
 selsearch --help
 ```
-
-# Known Issues
-
-On MacOS:
-- `<alt>` is mapped to `<option>`
-- XSel does not seem to work out of the box, it was disable in v0.2.4, until it is fixed
-- You might need to give SelSearch to your terminal
-
-**Not listed?** Please create a new [issue](https://github.com/jeertmans/selsearch/issues).
 
 ### Future Features
 
