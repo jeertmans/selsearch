@@ -1,6 +1,5 @@
 import click
-from pynput.keyboard import Listener, Key
-
+from pynput.keyboard import Key, Listener
 
 events = dict()
 
