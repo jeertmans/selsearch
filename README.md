@@ -1,6 +1,7 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/jeertmans/selsearch/main.svg)](https://results.pre-commit.ci/latest/github/jeertmans/selsearch/main)
 [![Latest Release][pypi-version-badge]][pypi-version-url]
 [![Python version][pypi-python-version-badge]][pypi-version-url]
+![PyPI - Downloads](https://img.shields.io/pypi/dm/selsearch)
 # SelSearch - Internet search based on selected text
 
 <p align="center">
