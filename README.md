@@ -11,15 +11,13 @@ SelSearch grabs text selected in any application and opens a web browser to sear
 
 By default, it will search on Google, but you can custimize your search to, for example, look for a DeepL translation of your text (as in the demo below).
 
-SelSearch is cross-platform. However, especially for MacOS users, we recommend you reading [Known Issues](known-issues) if you encounter any problem.
-
 ### Installation
 SelSearch can be installed using `pip`:
 ```
 pip install selsearch
 ```
 
-For more infomations about installation guidelines and known issues, see [INSTALL.md](https://github.com/jeertmans/selsearch/INSTALL.md).
+For more infomations about installation guidelines and known issues, see [INSTALL.md](INSTALL.md).
 
 ### Live Demo
 
