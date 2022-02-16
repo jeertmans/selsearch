@@ -45,30 +45,36 @@ As most MacOS distrubutions (can) use X, it is recommended to install [XSel](htt
 
 *Many thanks to [mmakdis](https://github.com/mmakdis) for providing help and screenshots for the MacOS version.*
 
-### `This process is not trusted! [...]`
+### * `This process is not trusted! [...]`
 
 You need to allow your terminal to use your keyboard.
 
 First, open *System Preferences*, and search for *Security & Privacy*.
 
-![](static/macos/not-trusted-1.png)
+<p align="center">
+  <img src="static/macos/not-trusted-1.png" alt="drawing" height="600"/>
+</p>
 
 Then, in *Accessibility*, allow the *Terminal* application to control your computer.
 
-![](static/macos/not-trusted-2.png)
+<p align="center">
+  <img src="static/macos/not-trusted-2.png" alt="drawing" height="600"/>
+</p>
 
 Repeat the same process for *Input Monitoring*.
 
-![](static/macos/not-trusted-3.png)
+<p align="center">
+  <img src="static/macos/not-trusted-3.png" alt="drawing" height="600"/>
+</p>
 
-### `xsel: Can't open display: (null): Inappropriate ioctl for device`
+### * `xsel: Can't open display: (null): Inappropriate ioctl for device`
 
 In a terminal, or in your `.bashrc` (or equivalent), write `export DISPLAY=:1`.
 Verify that it works by testing the command `xsel`.
 
 If this does fix the problem, disable XSel in the config file and open an [issue](https://github.com/jeertmans/selsearch/issues).
 
-### My shortcut using `<alt>` doest not work
+### * My shortcut using `<alt>` doest not work
 
 It seems that the `<alt>` key is mapped to `<option>` on MacOS keyboards.
 
@@ -76,7 +82,7 @@ It seems that the `<alt>` key is mapped to `<option>` on MacOS keyboards.
 
 ## Known Issues
 
-### `'selsearch' is not recognized as an internal or external command [...]`
+### * `'selsearch' is not recognized as an internal or external command [...]`
 
 Most probably, when you installed SelSearch, a warning told you that `Path\To\Python\Scripts\` was not in `PATH`.
 This means that the `selsearch` command is not directly exposed to you in the terminal.
