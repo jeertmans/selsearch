@@ -50,7 +50,7 @@ selsearch init
 The path will be displayed and modifications to this file will be taken into account everytime you run `selsearch` or any of its subcommands. The file will look something like this:
 
 ```ini
-; Removing any of the following section will cause the program to break
+; Removing any of the following sections will cause the program to break
 [defaults]
 exit = <ctrl>+<alt>+e  ; Can be removed to disallow exiting SelSearch
 url = google  ; Default url used for `selsearch`
