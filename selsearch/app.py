@@ -3,6 +3,7 @@ import click
 from . import __version__
 from .config import get_config, init
 from .gui import gui
+from .keys import keys
 from .main import search_selected_text
 
 
@@ -53,6 +54,7 @@ def cli(ctx, url, list_urls):
 
 cli.add_command(init)
 cli.add_command(gui)
+cli.add_command(keys)
 
 if __name__ == "__main__":
     cli()
