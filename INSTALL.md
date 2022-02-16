@@ -2,10 +2,10 @@
 
 This document provides platform specific installation guidelines.
 
-- [All-Plaftorms](all-platforms)
-- [Linux](linux)
-- [MacOS](macos)
-- [Windows](windows)
+- [All-Plaftorms](#all-platforms)
+- [Linux](#linux)
+- [MacOS](#macos)
+- [Windows](#windows)
 
 # All Platforms
 
@@ -51,15 +51,15 @@ You need to allow your terminal to use your keyboard.
 
 First, open *System Preferences*, and search for *Security & Privacy*.
 
-![](https://raw.githubusercontent.com/jeertmans/selsearch/main/static/macos/not-trusted-1.png)
+![](static/macos/not-trusted-1.png)
 
 Then, in *Accessibility*, allow the *Terminal* application to control your computer.
 
-![](https://raw.githubusercontent.com/jeertmans/selsearch/main/static/macos/not-trusted-2.png)
+![](static/macos/not-trusted-2.png)
 
 Repeat the same process for *Input Monitoring*.
 
-![](https://raw.githubusercontent.com/jeertmans/selsearch/main/static/macos/not-trusted-3.png)
+![](static/macos/not-trusted-3.png)
 
 ### `xsel: Can't open display: (null): Inappropriate ioctl for device`
 
