@@ -39,7 +39,7 @@ As most Linux distrubutions use X, it is recommended to install [XSel](http://ww
 
 ## (Optional) Install XSel
 
-As most MacOS distrubutions (can) use X, it is recommended to install [XSel](https://formulae.brew.sh/formula/xsel) as it provides the best experience.
+As MacOS distrubutions (can) use X, it is recommended to install [XSel](https://formulae.brew.sh/formula/xsel) as it provides the best experience.
 
 ## Known Issues
 
