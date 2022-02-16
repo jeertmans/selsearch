@@ -5,6 +5,7 @@ import time
 
 import pyperclip
 from pynput.keyboard import Controller, Key
+
 from .config import get_config
 
 keyboard = Controller()
