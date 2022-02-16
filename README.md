@@ -11,15 +11,13 @@ SelSearch grabs text selected in any application and opens a web browser to sear
 
 By default, it will search on Google, but you can custimize your search to, for example, look for a DeepL translation of your text (as in the demo below).
 
-SelSearch is cross-platform. However, especially for MacOS users, we recommend you reading [Known Issues](known-issues) if you encounter any problem.
-
 ### Installation
 SelSearch can be installed using `pip`:
 ```
 pip install selsearch
 ```
 
-SelSearch best works with [XSel](http://www.kfish.org/software/xsel/), a program that grabs current selection using X. If XSel is not available on your system, SelSearch will use the clipboard to grab current selection.
+For more infomations about installation guidelines and known issues, see [INSTALL.md](INSTALL.md).
 
 ### Live Demo
 
@@ -52,7 +50,7 @@ selsearch init
 The path will be displayed and modifications to this file will be taken into account everytime you run `selsearch` or any of its subcommands. The file will look something like this:
 
 ```ini
-; Removing any of the following section will cause the program to break
+; Removing any of the following sections will cause the program to break
 [defaults]
 exit = <ctrl>+<alt>+e  ; Can be removed to disallow exiting SelSearch
 url = google  ; Default url used for `selsearch`
@@ -79,15 +77,6 @@ Other functionnalities can be listed with:
 ```
 selsearch --help
 ```
-
-# Known Issues
-
-On MacOS:
-- `<alt>` is mapped to `<option>`
-- XSel does not seem to work out of the box, it was disable in v0.2.4, until it is fixed
-- You might need to give SelSearch to your terminal
-
-**Not listed?** Please create a new [issue](https://github.com/jeertmans/selsearch/issues).
 
 ### Future Features
 
