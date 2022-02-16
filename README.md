@@ -54,6 +54,7 @@ The path will be displayed and modifications to this file will be taken into acc
 [defaults]
 exit = <ctrl>+<alt>+e  ; Can be removed to disallow exiting SelSearch
 url = google  ; Default url used for `selsearch`
+xsel = True  ; Can be removed or set to False to disallow using XSel
 
 [urls]
 ; List of urls and their aliases
