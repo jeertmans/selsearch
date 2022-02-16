@@ -75,6 +75,7 @@ googlescholar = https://scholar.google.com/scholar?q=
 ```
 
 You can validate your keyboard shortcuts with:
+
 ```
 selsearch keys
 ```
