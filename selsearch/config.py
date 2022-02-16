@@ -8,6 +8,7 @@ DEFAULT_CONFIG = {
     "defaults": {
         "exit": "<ctrl>+<alt>+e",
         "url": "google",
+        "xsel": True,
     },
     "urls": {
         "google": "https://www.google.com/search?q=",

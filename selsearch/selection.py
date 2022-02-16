@@ -5,6 +5,7 @@ import time
 
 import pyperclip
 from pynput.keyboard import Controller, Key
+from .config import get_config
 
 keyboard = Controller()
 
@@ -41,9 +42,14 @@ def get_selected_text_mac():
     return text
 
 
-if platform.system() == "Darwin":
-    get_selected_text = get_selected_text_mac
-elif shutil.which("xsel"):
+config = get_config()
+
+
+xsel = config["defaults"].getboolean("xsel", False)
+
+if xsel and shutil.which("xsel"):
     get_selected_text = get_selected_text_xsel
+elif platform.system() == "Darwin":
+    get_selected_text = get_selected_text_mac
 else:
     get_selected_text = get_selected_text_alt
