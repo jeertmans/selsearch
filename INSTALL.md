@@ -13,6 +13,12 @@ This document provides platform specific installation guidelines.
 
 SelSearch requires Python>=3.6 to be installed.
 
+Several Python packages are also required, but automatically installed with `pip`:
+- [appdirs](https://github.com/ActiveState/appdirs) for determining best path for config folder
+- [Click](https://click.palletsprojects.com/en/8.0.x/) for creating the command line interface
+- [pynput](https://pynput.readthedocs.io/en/latest/#) for controlling and motoring the beyboard
+- [Pyperclip](https://pyperclip.readthedocs.io/en/latest/) for copying and pasting text to the clipboard
+
 ## PIP Install
 
 In a terminal / anaconda prompt, latest version of SelSearch can be obtained via pip:
