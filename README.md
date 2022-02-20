@@ -67,10 +67,11 @@ googlescholar = https://scholar.google.com/scholar?q=
 
 [shortcuts]
 ; List of shortcuts and corresponding url (or alias)
+; Warning: make sure the shortcuts are not used by any other application you are running.
 ; You can add / remove / edit any number of lines
-<ctrl>+<alt>+m = google
-<ctrl>+<alt>+n = deepl
-<ctrl>+<alt>+b = wordreference
+<ctrl>+0 = google
+<ctrl>+1 = deepl
+<ctrl>+2 = wordreference
 
 ```
 

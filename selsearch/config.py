@@ -17,9 +17,9 @@ DEFAULT_CONFIG = {
         "googlescholar": "https://scholar.google.com/scholar?q=",
     },
     "shortcuts": {
-        "<ctrl>+<alt>+m": "google",
-        "<ctrl>+<alt>+n": "deepl",
-        "<ctrl>+<alt>+b": "wordreference",
+        "<ctrl>+0": "google",
+        "<ctrl>+1": "deepl",
+        "<ctrl>+2": "wordreference",
     },
 }
 
