@@ -23,6 +23,7 @@ def get_selected_text_alt():
         keyboard.press("c")
         time.sleep(0.1)
         keyboard.release("c")
+        time.sleep(0.1)
     text = pyperclip.paste()
 
     pyperclip.copy(clipboard)
@@ -37,6 +38,7 @@ def get_selected_text_mac():
         keyboard.press("c")
         time.sleep(0.1)
         keyboard.release("c")
+        time.sleep(0.1)
     text = pyperclip.paste()
 
     pyperclip.copy(clipboard)
