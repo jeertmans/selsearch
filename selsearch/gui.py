@@ -11,7 +11,6 @@ listeners = []
 
 def callback(f, *args, **kwargs):
     def wrapper():
-
         while listeners:
             listeners.pop().stop()
 
@@ -47,7 +46,6 @@ def gui():
         shortcuts[exit_shortcut] = callback(exit)
 
     while True:
-
         with GlobalHotKeys(shortcuts) as listener:
             listeners.append(listener)
             listener.join()
