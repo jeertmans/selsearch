@@ -5,7 +5,7 @@
 # SelSearch - Internet search based on selected text
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jeertmans/selsearch/main/static/logo.svg" />
+  <img src="https://raw.githubusercontent.com/jeertmans/selsearch/main/static/logo.png" />
 </p>
 
 SelSearch grabs text selected in any application and opens a web browser to search for.
