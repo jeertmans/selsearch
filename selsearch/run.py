@@ -1,16 +1,18 @@
 from functools import partial
+from typing import Any, Callable, List
 
 import click
-from pynput.keyboard import GlobalHotKeys
+from pynput.keyboard import GlobalHotKeys, Listener
 
 from .config import get_config
 from .search import search_selected_text
 
-listeners = []
+callables = [Callable[[], None]]
+listeners: List[Listener] = []
 
 
-def callback(f, *args, **kwargs):
-    def wrapper():
+def callback(f: Callable[..., Any], *args: Any, **kwargs: Any) -> Callable[[], None]:
+    def wrapper() -> None:
         while listeners:
             listeners.pop().stop()
 
@@ -19,12 +21,9 @@ def callback(f, *args, **kwargs):
     return wrapper
 
 
-callables = []
-
-
 @click.command()
 @click.help_option("-h", "--help")
-def run():
+def run() -> None:
     """
     SelSearch's main process.
 
@@ -52,5 +51,5 @@ def run():
             listener.join()
 
         while callables:
-            f = callables.pop()
+            f: Callable[[], None] = callables.pop()  # type: ignore
             f()
