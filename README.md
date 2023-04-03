@@ -5,7 +5,7 @@
 # SelSearch - Internet search based on selected text
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jeertmans/selsearch/main/static/logo.png" />
+  <img src="https://raw.githubusercontent.com/jeertmans/selsearch/main/static/logo.svg" />
 </p>
 
 SelSearch grabs text selected in any application and opens a web browser to search for.
@@ -30,15 +30,13 @@ The demo hereunder shows how you can select text, *Linux*, in a terminal, search
 
 While SeaSearch can be used in command line, it is recommended to use its background mode via:
 ```
-selsearch gui &
+selsearch run &
 ```
 The `&` at the end will allow SelSearch to run in background.
 
 SelSearch will continuously listen for (customizable) keyboard shortcuts and trigger various internet researches in response. For example, in the demo, Google search is mapped to `<ctrl>+<m>` and DeepL translation to `<ctrl>+<n>`.
 
 It is also recommended to set up `selsearch gui` to launch at startup. How to do that depends on your platform and is currently not handled by this project.
-
-*Note: despite the naming, SelSearch does not a graphical user interface (gui) yet. This is planned as a future feature for easier configuration.*
 
 ### Customize
 
@@ -50,28 +48,24 @@ selsearch init
 
 The path will be displayed and modifications to this file will be taken into account everytime you run `selsearch` or any of its subcommands. The file will look something like this:
 
-```ini
-; Removing any of the following sections will cause the program to break
-[defaults]
-exit = <ctrl>+<alt>+e  ; Can be removed to disallow exiting SelSearch
-url = google  ; Default url used for `selsearch`
-xsel = True  ; Can be removed or set to False to disallow using XSel
+```toml
+xsel = true  # Wether to use or not XSel
+exit_shortcut = "<ctrl>+<alt>+e"  # Exit shortcut (optional)
 
 [urls]
-; List of urls and their aliases
-; You can add / remove / edit any number of lines
-google = https://www.google.com/search?q=
-wordreference = https://www.wordreference.com/enfr/
-deepl = https://www.deepl.com/translator#en/fr/
-googlescholar = https://scholar.google.com/scholar?q=
+# List of urls
+# You can add / remove / edit any number of lines
+google = "https://www.google.com/search?q="
+wordreference = "https://www.wordreference.com/enfr/"
+deepl = "https://www.deepl.com/translator#en/fr/"
+googlescholar = "https://scholar.google.com/scholar?q="
 
 [shortcuts]
-; List of shortcuts and corresponding url (or alias)
-; Warning: make sure the shortcuts are not used by any other application you are running.
-; You can add / remove / edit any number of lines
-<ctrl>+0 = google
-<ctrl>+1 = deepl
-<ctrl>+2 = wordreference
+# List of shotcuts
+# You can add / remove / edit any number of lines
+"<ctrl>+0" = "google"
+"<ctrl>+1" = "deepl"
+"<ctrl>+2" = "wordreference"
 
 ```
 

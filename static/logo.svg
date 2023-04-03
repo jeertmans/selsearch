@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="68.004715mm"
+   height="14.054931mm"
+   viewBox="0 0 68.004715 14.054931"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.2003863"
+     inkscape:cx="-100.38435"
+     inkscape:cy="156.19972"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="powermask"
+       id="path-effect8011"
+       is_visible="true"
+       lpeversion="1"
+       uri="#mask-powermask-path-effect8011"
+       invert="false"
+       hide_mask="false"
+       background="true"
+       background_color="#ffffffff" />
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask-powermask-path-effect8011">
+      <path
+         id="mask-powermask-path-effect8011_box"
+         style="fill:#ffffff;fill-opacity:1"
+         d="M 54.841461,78.017097 H 80.598606 V 94.072028 H 54.841461 Z" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="57.952156"
+         y="89.846939"
+         id="text8009"><tspan
+           sodipodi:role="line"
+           id="tspan8007"
+           style="stroke-width:0.264583"
+           x="57.952156"
+           y="89.846939">SEL</tspan></text>
+    </mask>
+    <filter
+       id="mask-powermask-path-effect8011_inverse"
+       inkscape:label="filtermask-powermask-path-effect8011"
+       style="color-interpolation-filters:sRGB"
+       height="100"
+       width="100"
+       x="-50"
+       y="-50">
+      <feColorMatrix
+         id="mask-powermask-path-effect8011_primitive1"
+         values="1"
+         type="saturate"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="mask-powermask-path-effect8011_primitive2"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         in="fbSourceGraphic" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-55.841461,-79.017097)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="79.949249"
+       y="89.92569"
+       id="text2203"><tspan
+         sodipodi:role="line"
+         id="tspan2201"
+         style="fill:#800000;stroke-width:0.264583"
+         x="79.949249"
+         y="89.92569">SEARCH</tspan></text>
+    <path
+       style="fill:#800000;stroke-width:0.264583"
+       id="rect3931"
+       width="23.757145"
+       height="14.054931"
+       x="55.841461"
+       y="79.017097"
+       mask="url(#mask-powermask-path-effect8011)"
+       inkscape:path-effect="#path-effect8011"
+       d="M 55.841461,79.017097 H 79.598606 V 93.072028 H 55.841461 Z"
+       sodipodi:type="rect" />
+  </g>
+</svg>

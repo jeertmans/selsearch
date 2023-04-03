@@ -6,16 +6,16 @@ import time
 import pyperclip
 from pynput.keyboard import Controller, Key
 
-from .config import get_config
-
+XSEL_AVAILABLE = shutil.which("xsel") is not None
+MACOS = platform.system() == "Darwin"
 keyboard = Controller()
 
 
-def get_selected_text_xsel():
+def get_selected_text_xsel() -> str:
     return os.popen("xsel").read()
 
 
-def get_selected_text_alt():
+def get_selected_text_alt() -> str:
     clipboard = pyperclip.paste()
 
     keyboard.release(Key.alt)
@@ -27,10 +27,10 @@ def get_selected_text_alt():
     text = pyperclip.paste()
 
     pyperclip.copy(clipboard)
-    return text
+    return text  # type: ignore
 
 
-def get_selected_text_mac():
+def get_selected_text_mac() -> str:
     clipboard = pyperclip.paste()
 
     keyboard.release(Key.alt)
@@ -42,17 +42,13 @@ def get_selected_text_mac():
     text = pyperclip.paste()
 
     pyperclip.copy(clipboard)
-    return text
+    return text  # type: ignore
 
 
-config = get_config()
-
-
-xsel = config["defaults"].getboolean("xsel", False)
-
-if xsel and shutil.which("xsel"):
-    get_selected_text = get_selected_text_xsel
-elif platform.system() == "Darwin":
-    get_selected_text = get_selected_text_mac
-else:
-    get_selected_text = get_selected_text_alt
+def get_selected_text(xsel: bool) -> str:
+    if xsel and XSEL_AVAILABLE:
+        return get_selected_text_xsel()
+    elif MACOS:
+        return get_selected_text_mac()
+    else:
+        return get_selected_text_alt()

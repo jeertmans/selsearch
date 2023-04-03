@@ -4,7 +4,7 @@ import click
 from pynput.keyboard import GlobalHotKeys
 
 from .config import get_config
-from .main import search_selected_text
+from .search import search_selected_text
 
 listeners = []
 
@@ -23,24 +23,23 @@ callables = []
 
 
 @click.command()
-def gui():
+@click.help_option("-h", "--help")
+def run():
     """
-    SelSearch's Graphical User Interface.
+    SelSearch's main process.
 
-    Continuously runs in background.
+    Runs until process is killed or exit shortcut is called.
     """
     config = get_config()
-    urls = config["urls"]
-    default_url = config["defaults"].get("url", "").lower()
-    default_url = urls.get(default_url, None) or default_url
+    urls = config.urls
 
     shortcuts = {}
 
-    for shortcut, url in config["shortcuts"].items():
-        url = urls.get(url, None) or url or default_url
-        shortcuts[shortcut] = callback(search_selected_text, where=url)
+    for shortcut, url_alias in config.shortcuts.items():
+        url = urls[url_alias]
+        shortcuts[shortcut] = callback(search_selected_text, where=url, xsel=config.xsel)
 
-    exit_shortcut = config["defaults"].get("exit", None)
+    exit_shortcut = config.exit_shortcut
 
     if exit_shortcut:
         shortcuts[exit_shortcut] = callback(exit)
