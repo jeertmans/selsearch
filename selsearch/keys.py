@@ -1,10 +1,13 @@
+from typing import Dict, Optional, Union
+
 import click
-from pynput.keyboard import Key, Listener
+from pynput.keyboard import Key, KeyCode, Listener
 
-events = dict()
+EventType = Optional[Union[Key, KeyCode]]
+events: Dict[EventType, None] = dict()
 
 
-def key_repr(key):
+def key_repr(key: EventType) -> str:
     key = str(key)
     if "Key." in key:
         return f"<{key[4:]}>"
@@ -12,7 +15,7 @@ def key_repr(key):
         return key[1]
 
 
-def on_press(event):
+def on_press(event: EventType) -> bool:
     if event == Key.esc:
         click.echo("Pressed <esc>, now leaving.")
         return False
@@ -20,16 +23,18 @@ def on_press(event):
         events[event] = None
         text = "+".join(map(key_repr, events.keys()))
         click.echo(f"Pressed {text}")
+        return True
 
 
-def on_release(event):
+def on_release(event: EventType) -> None:
     events.pop(event, None)
 
 
 @click.command()
-def keys():
+@click.help_option("-h", "--help")
+def keys() -> None:
     """
-    Enters a key listening mode where every key input is printed in the terminal.
+    Print keys as they are pressed.
 
     This is especially usefull to validate your shortcuts.
     """

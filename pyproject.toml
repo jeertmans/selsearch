@@ -1,0 +1,50 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.black]
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+py_version = 38
+
+[tool.mypy]
+disallow_untyped_decorators = false
+install_types = true
+python_version = "3.8"
+strict = true
+
+[tool.poetry]
+authors = ["Jérome Eertmans <jeertmans@icloud.com>"]
+description = "Internet search based on selected text"
+homepage = "https://github.com/jeertmans/selsearch"
+keywords = ["manim", "slides", "plugin", "manimgl"]
+license = "MIT"
+name = "selsearch"
+packages = [
+  {include = "selsearch"}
+]
+readme = "README.md"
+repository = "https://github.com/jeertmans/selsearch"
+version = "0.4.0"
+
+[tool.poetry.dependencies]
+appdirs = "^1.4.4"
+click = "^8.1.3"
+pydantic = "^1.10.7"
+pynput = "^1.7.6"
+pyperclip = "^1.8.2"
+python = "^3.8"
+rtoml = "^0.9.0"
+
+[tool.poetry.plugins]
+
+[tool.poetry.plugins."console_scripts"]
+selsearch = "selsearch.__main__:cli"
+
+[tool.ruff]
+ignore = [
+  "E501"
+]
+target-version = "py38"
