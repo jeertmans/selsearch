@@ -7,7 +7,7 @@ from pynput.keyboard import GlobalHotKeys, Listener
 from .config import get_config
 from .search import search_selected_text
 
-callables = [Callable[[], None]]
+callables: List[Callable[[], None]] = []
 listeners: List[Listener] = []
 
 
@@ -51,5 +51,5 @@ def run() -> None:
             listener.join()
 
         while callables:
-            f: Callable[[], None] = callables.pop()  # type: ignore
+            f = callables.pop()
             f()
