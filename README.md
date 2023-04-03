@@ -36,7 +36,7 @@ The `&` at the end will allow SelSearch to run in background.
 
 SelSearch will continuously listen for (customizable) keyboard shortcuts and trigger various internet researches in response. For example, in the demo, Google search is mapped to `<ctrl>+<m>` and DeepL translation to `<ctrl>+<n>`.
 
-It is also recommended to set up `selsearch gui` to launch at startup. How to do that depends on your platform and is currently not handled by this project.
+It is also recommended to set up `selsearch run` to launch at startup. How to do that depends on your platform and is currently not handled by this project.
 
 ### Customize
 
