@@ -49,7 +49,7 @@ selsearch init
 The path will be displayed and modifications to this file will be taken into account everytime you run `selsearch` or any of its subcommands. The file will look something like this:
 
 ```toml
-xsel = true  # Wether to use or not XSel
+xsel = true  # Whether to use or not XSel
 exit_shortcut = "<ctrl>+<alt>+e"  # Exit shortcut (optional)
 
 [urls]
