@@ -2,7 +2,7 @@ import click
 from click import Context
 
 from . import __version__
-from .config import UrlAlias, get_config, init, dump
+from .config import UrlAlias, dump, get_config, init
 from .keys import keys
 from .run import run
 from .search import search_selected_text

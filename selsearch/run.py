@@ -37,7 +37,9 @@ def run():
 
     for shortcut, url_alias in config.shortcuts.items():
         url = urls[url_alias]
-        shortcuts[shortcut] = callback(search_selected_text, where=url, xsel=config.xsel)
+        shortcuts[shortcut] = callback(
+            search_selected_text, where=url, xsel=config.xsel
+        )
 
     exit_shortcut = config.exit_shortcut
 
