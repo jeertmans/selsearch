@@ -5,7 +5,7 @@ from typing import Any, Dict, Optional
 import click
 import rtoml as toml
 from appdirs import user_config_dir
-from pydantic import BaseModel, HttpUrl, root_validator
+from pydantic import BaseModel, HttpUrl, model_validator
 
 Shortcut = str
 UrlAlias = str
@@ -26,13 +26,10 @@ class Config(BaseModel):  # type: ignore
         "<ctrl>+2": "wordreference",
     }
 
-    @root_validator
-    def validate_urls(cls, values: Dict[Any, Any]) -> Dict[Any, Any]:
-        urls: Dict[UrlAlias, HttpUrl] = values.get("urls")  # type: ignore
-        shortcuts: Dict[Shortcut, UrlAlias] = values.get("shortcuts")  # type: ignore
-
-        for shortcut, url_alias in shortcuts.items():
-            if url_alias not in urls:
+    @model_validator(mode="after")
+    def validate_urls(cls, config: "Config") -> "Config":
+        for shortcut, url_alias in config.shortcuts.items():
+            if url_alias not in config.urls:
                 raise ValueError(
                     "An error occured while parsing [shortcuts]: "
                     f"`{url_alias}` (shortcut: `{shortcut}`) "
@@ -40,7 +37,7 @@ class Config(BaseModel):  # type: ignore
                     " create one!"
                 )
 
-        return values
+        return config
 
     @classmethod
     def parse_toml(cls, file: Path) -> "Config":
